@@ -10,7 +10,7 @@ function countDownWhileLoop(start) {
         counter--; 
     }
 
-    return result(); 
+    return result.trim(); 
 }
 
 // Function utilizing a for loop
