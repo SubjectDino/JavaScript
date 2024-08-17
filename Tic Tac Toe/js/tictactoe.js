@@ -2,15 +2,15 @@ let activePlayer = 'X';
 
 let selectedSquares = [];
 
-function placeXOrO(sqaureNumber) {
-    if (!selectedSquares.some(element => element.include(sqaureNumber))) {
-        let select = document.getElementById(sqaureNumber);
+function placeXOrO(squareNumber) {
+    if (!selectedSquares.some(element => element.include(squareNumber))) {
+        let select = document.getElementById(squareNumber);
         if(activePlayer === 'X') {
             select.style.backgroundImage = 'url("images/x.png")';
         } else {
             select.style.backgroundImage = 'url("images/o.png")';
         }
-        selectedSquares.push(sqaureNumber + activePlayer);
+        selectedSquares.push(squareNumber + activePlayer);
 
         checkWinConditions();
 
