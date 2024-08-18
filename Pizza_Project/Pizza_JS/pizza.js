@@ -38,7 +38,7 @@ function getTopping(runningTotal, text1) {
             text1 = text1+toppingArray[j].value+"<br>";
         }
     }
-    var toppingCount =selectedTopping.length;
+    var toppingCount =selectedtopping.length;
     if (toppingCount > 1) {
         toppingTotal = (toppingCount - 1);
     } else {
