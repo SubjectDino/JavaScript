@@ -20,7 +20,7 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
 
-        Audio("./media/place.mp3");
+        audio("./media/place.mp3");
 
         if (activePlayer === 'O') {
             disableClick();
@@ -32,7 +32,7 @@ function placeXOrO(squareNumber) {
         let success = false;
         let pickASquare;
         while (!success) {
-            pickASquare = String(Math.floor(Math,random() * 9));
+            pickASquare = String(Math.floor(Math.random() * 9));
             if (placeXOrO(pickASquare)) {
                 placeXOrO(pickASquare);
                 success = true;
@@ -60,7 +60,7 @@ function checkWinConditions() {
     else if (arrayIncludes("0O", "4O", "8O")) { drawWinLine(100, 100, 520, 520) }
 
     else if (selectedSquares.length >= 9) {
-        Audio("./media/tie.mp3");
+        audio("./media/tie.mp3");
         setTimeout(function () { resetGame(); }, 500);
     }
 
@@ -80,7 +80,7 @@ function disableClick() {
 }
 
 function audio(audioURL) {
-    let audio = new Audio(audioURL);
+    let audio = new audio(audioURL);
     audio.play();
 }
 
