@@ -10,6 +10,7 @@
                 <input type="button" class="button" value="Get Content" idn="btn_content" onclick="getContent();"/>
             </div>
         </div>
+        <!--Javascript-->
         <script type="text/javascript">
             var ajax = new XMLHttpRequest();
 
@@ -21,6 +22,7 @@
                 }
             }
 
+        <!-- btn_content display  -->
             function getContent() {
                 ajax.send();
                 document.getElementById('btn_content').style.display = 'none';
