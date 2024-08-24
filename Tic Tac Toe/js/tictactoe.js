@@ -2,8 +2,12 @@ let activePlayer = 'X';
 
 let selectedSquares = [];
 
+function audio() {
+    audio.play();
+}
+
 function placeXOrO(squareNumber) {
-    if (!selectedSquares.some(element => element.include(squareNumber))) {
+    if (!selectedSquares.some(element => element.includes(squareNumber))) {
         let select = document.getElementById(squareNumber);
         if(activePlayer === 'X') {
             select.style.backgroundImage = 'url("images/x.png")';
